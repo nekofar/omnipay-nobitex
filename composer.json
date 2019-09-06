@@ -1,0 +1,48 @@
+{
+  "name": "nekofar/omnipay-nobitex",
+  "type": "library",
+  "description": "Nobitex driver for the Omnipay PHP payment processing library",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Milad Nekofar",
+      "email": "milad@nekofar.com"
+    }
+  ],
+  "keywords": [
+    "omnipay",
+    "nobitex",
+    "gateway",
+    "merchant",
+    "payment",
+    "purchase",
+    "bitcoin",
+    "litecoin"
+  ],
+  "homepage": "https://github.com/nekofar/omnipay-nobitex",
+  "autoload": {
+    "psr-4": {
+      "Omnipay\\Nobitex\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.0",
+    "ext-json": "*",
+    "omnipay/common": "^3.0"
+  },
+  "require-dev": {
+    "omnipay/tests": "^3.1",
+    "squizlabs/php_codesniffer": "^3.4",
+    "phpunit/phpunit": "^6.0"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "lint": "phpcs"
+  }
+}
