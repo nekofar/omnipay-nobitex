@@ -1,0 +1,14 @@
+HTTP/2 200
+server: nginx/1.14.0 (Ubuntu)
+date: Sat, 07 Sep 2019 00:26:28 GMT
+content-type: application/json
+content-length: 135
+vary: Accept, Origin
+allow: OPTIONS, POST
+strict-transport-security: max-age=31536000; includeSubdomains
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+referrer-policy: origin-when-cross-origin
+x-content-type-options: nosniff
+
+{"status": "success", "token": "e9282e56c83f93eb077043e5ad8b6cf5b3ff7568"}
