@@ -31,20 +31,17 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     protected $liveEndpoint = 'https://api.nobitex.market';
 
     /**
-     * Get the raw data array for this message. The format of this varies from gateway to
-     * gateway, but will usually be either an associative array, or a SimpleXMLElement.
-     *
-     * @return mixed
+     * @return string
      */
-    public function getData()
+    public function getApiKey()
     {
-        // TODO: Implement getData() method.
+        return $this->getParameter('apiKey');
     }
 
     /**
      * Send the request with specified data
      *
-     * @param mixed $data The data to send
+     * @param mixed $data The data to send.
      * @return ResponseInterface
      * @throws InvalidResponseException
      */
@@ -94,8 +91,8 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     /**
      * @return string
      */
-    public function getApiKey()
+    protected function getMobile()
     {
-        return $this->getParameter('apiKey');
+        return $this->getParameter('mobile');
     }
 }
