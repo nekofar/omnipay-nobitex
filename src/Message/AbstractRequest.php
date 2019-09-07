@@ -8,6 +8,7 @@ namespace Omnipay\Nobitex\Message;
 
 use Exception;
 use Money\Currencies\ISOCurrencies;
+use Money\Formatter\DecimalMoneyFormatter;
 use Omnipay\Common\Exception\InvalidResponseException;
 use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\ResponseInterface;
@@ -68,6 +69,14 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         $value = $this->getParameter('currencies');
         $value = is_array($value) ? implode(',', $value) : $value;
         return $value;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAmount()
+    {
+        return $this->getParameter('amount');
     }
 
     /**
