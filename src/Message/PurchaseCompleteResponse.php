@@ -18,6 +18,16 @@ class PurchaseCompleteResponse extends AbstractResponse
      */
     public function isSuccessful()
     {
-        // TODO: Implement isSuccessful() method.
+        return isset($this->data['status']) && $this->data['status'] === 'success';
+    }
+
+    /**
+     * Gateway Reference
+     *
+     * @return null|string A reference provided by the gateway to represent this transaction
+     */
+    public function getTransactionReference()
+    {
+        return $this->data['txHash'];
     }
 }
