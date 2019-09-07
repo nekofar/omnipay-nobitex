@@ -11,5 +11,10 @@ namespace Omnipay\Nobitex\Message;
  */
 abstract class AbstractResponse extends \Omnipay\Common\Message\AbstractResponse
 {
-
+    /**
+     * The embodied request object.
+     *
+     * @var AbstractRequest
+     */
+    protected $request;
 }
