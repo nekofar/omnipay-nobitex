@@ -39,6 +39,15 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     }
 
     /**
+     * @param string $value
+     * @return AbstractRequest
+     */
+    public function setApiKey(string $value)
+    {
+        return $this->setParameter('apiKey', $value);
+    }
+
+    /**
      * Send the request with specified data
      *
      * @param mixed $data The data to send.

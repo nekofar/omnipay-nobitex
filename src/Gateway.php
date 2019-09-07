@@ -51,12 +51,28 @@ class Gateway extends AbstractGateway
     }
 
     /**
+     * @return string
+     */
+    public function getApiKey()
+    {
+        return $this->getParameter('apiKey');
+    }
+
+    /**
      * @param string $value
      * @return $this
      */
     public function setReturnUrl(string $value)
     {
         return $this->setParameter('returnUrl', $value);
+    }
+
+    /**
+     * @return string
+     */
+    public function getReturnUrl()
+    {
+        return $this->getParameter('returnUrl');
     }
 
     /**
