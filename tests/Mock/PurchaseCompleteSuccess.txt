@@ -1,0 +1,14 @@
+HTTP/2 200
+server: nginx/1.14.0 (Ubuntu)
+date: Sat, 07 Sep 2019 00:34:40 GMT
+content-type: application/json
+content-length: 64
+vary: Accept, Origin
+allow: OPTIONS, POST
+strict-transport-security: max-age=31536000; includeSubdomains
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+referrer-policy: origin-when-cross-origin
+x-content-type-options: nosniff
+
+{"status":"success","amount": 100,"cryptoAmount": 1.0,"txHash":"9dd865edc8d7927495aa2439ff3e7c94","factorNumber":"000001","mobile":"09123456789","description":"Example"}
