@@ -48,6 +48,18 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     }
 
     /**
+     * Get the gateway invoice token.
+     *
+     * @return string
+     */
+    public function getToken()
+    {
+        $value = $this->getParameter('token');
+        $value = $value ?: $this->httpRequest->query->get('token');
+        return $value;
+    }
+
+    /**
      * Send the request with specified data
      *
      * @param mixed $data The data to send.
