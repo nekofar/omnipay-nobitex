@@ -28,7 +28,7 @@ abstract class AbstractResponse extends \Omnipay\Common\Message\AbstractResponse
         '-4' => 'API is invalid.',
         '-5' => 'Amount parameter is required.',
         '-6' => 'Amount must be integer.',
-        '-7' => 'Amount min value is 10000 rls.',
+        '-7' => 'Amount min value is 10,000 rls.',
         '-8' => 'callbackURL parameter is required.',
         '-9' => 'callbackURL CORPS error.',
         '-10' => 'callbackURL format is invalid. Please use this format: https://domain.com/path/to/redirect',
