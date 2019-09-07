@@ -84,7 +84,7 @@ class GatewayTest extends GatewayTestCase
         ])->send();
 
         $this->assertTrue($response->isSuccessful());
-        $this->assertSame('0000001', $response->getTransactionReference());
+        $this->assertSame('9dd865edc8d7927495aa2439ff3e7c94', $response->getTransactionReference());
     }
 
     /**
