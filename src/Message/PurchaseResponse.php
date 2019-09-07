@@ -6,10 +6,12 @@
 
 namespace Omnipay\Nobitex\Message;
 
+use Omnipay\Common\Message\RedirectResponseInterface;
+
 /**
  * Class PurchaseResponse
  */
-class PurchaseResponse extends AbstractResponse
+class PurchaseResponse extends AbstractResponse implements RedirectResponseInterface
 {
     /**
      * Sandbox Endpoint URL
@@ -42,7 +44,7 @@ class PurchaseResponse extends AbstractResponse
      */
     public function isRedirect()
     {
-        return isset($this->data['status']) && $this->data['status'] === 1;
+        return isset($this->data['status']) && $this->data['status'] === 'success';
     }
 
     /**
@@ -52,7 +54,7 @@ class PurchaseResponse extends AbstractResponse
      */
     public function getRedirectUrl()
     {
-        return $this->getEndpoint() . $this->data['Authority'];
+        return $this->getEndpoint() . $this->data['token'];
     }
 
     /**
