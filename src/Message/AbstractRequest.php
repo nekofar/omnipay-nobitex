@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package Omnipay\Nobitex
  * @author Milad Nekofar <milad@nekofar.com>
@@ -7,8 +8,6 @@
 namespace Omnipay\Nobitex\Message;
 
 use Exception;
-use Money\Currencies\ISOCurrencies;
-use Money\Formatter\DecimalMoneyFormatter;
 use Omnipay\Common\Exception\InvalidResponseException;
 use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\ResponseInterface;
@@ -58,16 +57,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     {
         $value = $this->getParameter('token');
         $value = $value ?: $this->httpRequest->query->get('token');
-        return $value;
-    }
-
-    /**
-     * @return string
-     */
-    protected function getCurrencies()
-    {
-        $value = $this->getParameter('currencies');
-        $value = is_array($value) ? implode(',', $value) : $value;
         return $value;
     }
 
@@ -128,6 +117,16 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      * @return AbstractResponse
      */
     abstract protected function createResponse(array $data);
+
+    /**
+     * @return string
+     */
+    protected function getCurrencies()
+    {
+        $value = $this->getParameter('currencies');
+        $value = is_array($value) ? implode(',', $value) : $value;
+        return $value;
+    }
 
     /**
      * @return string
