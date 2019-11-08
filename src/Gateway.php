@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package Omnipay\Nobitex
  * @author Milad Nekofar <milad@nekofar.com>
@@ -11,7 +12,6 @@ use Omnipay\Common\Message\AbstractRequest;
 use Omnipay\Common\Message\RequestInterface;
 use Omnipay\Nobitex\Message\PurchaseCompleteRequest;
 use Omnipay\Nobitex\Message\PurchaseRequest;
-
 
 /**
  * Class Gateway
